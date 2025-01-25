@@ -286,7 +286,7 @@ const openImage = (key, index) => {
         <!-- Dinámicas -->
         <section class="md:col-span-3 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-6 rounded-xl shadow-lg relative">
           <div class="absolute -top-8 -left-8 w-16 h-16 bg-gray-600/30 rounded-full blur-3xl"></div>
-          <h4 class="text-2xl font-bold mb-6 text-center text-gray-200">Dinámicas</h4>
+          <h4 class="text-2xl font-bold mb-6 text-gray-200">Dinámicas</h4>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
             <!-- Galería -->
             <div class="relative md:col-span-2 overflow-hidden">
