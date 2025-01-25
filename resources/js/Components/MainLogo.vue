@@ -31,7 +31,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-      <div class="atropos my-atropos">
+      <div class="atropos bg-transparent w-[15rem] h-[15rem] sm:w-[22rem] sm:h-[22rem] my-atropos">
       <!-- scale container (required) -->
       <div class="atropos-scale">
       <!-- rotate container (required) -->
@@ -49,8 +49,6 @@ onUnmounted(() => {
 
 <style>
 .my-atropos {
-  width: 22rem;
-  height: 22rem;
-  background-color: transparent;
+  
 }
 </style>

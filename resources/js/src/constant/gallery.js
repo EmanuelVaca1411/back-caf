@@ -1,108 +1,52 @@
-export const galleryImages = [
-      {
-            src: '/images/gallery/1.jpg',
-            thumbnail: '/images/gallery/1.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/gallery/2.jpg',
-            thumbnail: '/images/gallery/2.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/gallery/3.jpg',
-            thumbnail: '/images/gallery/3.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/gallery/4.jpg',
-            thumbnail: '/images/gallery/4.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/gallery/5.jpg',
-            thumbnail: '/images/gallery/5.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/gallery/6.jpg',
-            thumbnail: '/images/gallery/6.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/gallery/7.jpg',
-            thumbnail: '/images/gallery/7.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/gallery/8.jpg',
-            thumbnail: '/images/gallery/8.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/gallery/9.jpg',
-            thumbnail: '/images/gallery/9.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/gallery/10.jpg',
-            thumbnail: '/images/gallery/10.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/gallery/11.jpg',
-            thumbnail: '/images/gallery/11.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/gallery/12.jpg',
-            thumbnail: '/images/gallery/12.jpg',
-            alt: 'Campamento CAF 2025'
-      }
-];
-    
-export const locationImages = [
-      {
-            src: '/images/location/1.jpg',
-            thumbnail: '/images/location/1.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/location/2.jpg',
-            thumbnail: '/images/location/2.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/location/3.jpg',
-            thumbnail: '/images/location/3.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/location/4.jpg',
-            thumbnail: '/images/location/4.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-];
+const folder = '/gallery'
 
-export const activityImages = [
-      {
-            src: '/images/location/1.jpg',
-            thumbnail: '/images/location/1.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/location/2.jpg',
-            thumbnail: '/images/location/2.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/location/3.jpg',
-            thumbnail: '/images/location/3.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-      {
-            src: '/images/location/4.jpg',
-            thumbnail: '/images/location/4.jpg',
-            alt: 'Campamento CAF 2025'
-      },
-];
+function generateImagePaths(gallery) {
+      const imagePaths = [];
+      for (let i = 1; i <= gallery.count; i++) {
+            const src = `${gallery.folder}/${i}.jpg`;
+            imagePaths.push({
+                  src,
+                  alt: src,
+            });
+      }
+      return imagePaths;
+}
+
+const activityGallery = {
+      folder: `${folder}/activity`,
+      count: 9,
+};
+
+const dominicalGallery = {
+      folder: `${folder}/dominical`,
+      count: 6,
+};
+
+const generalGallery = {
+      folder: `${folder}/general`,
+      count: 12,
+};
+
+const locationGallery = {
+      folder: `${folder}/location`,
+      count: 4,
+};
+
+const predicaGallery = {
+      folder: `${folder}/predica`,
+      count: 6,
+};
+
+const talentoGallery = {
+      folder: `${folder}/talento`,
+      count: 6,
+};
+
+// Generar los arrays de rutas para cada galería.
+export const activityImages = generateImagePaths(activityGallery);
+export const dominicalImages = generateImagePaths(dominicalGallery);
+export const generalImages = generateImagePaths(generalGallery);
+export const locationImages = generateImagePaths(locationGallery);
+export const predicaImages = generateImagePaths(predicaGallery);
+export const talentoImages = generateImagePaths(talentoGallery);
+

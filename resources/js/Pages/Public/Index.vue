@@ -1,5 +1,5 @@
 <script setup>
-import { activityImages, galleryImages, locationImages } from "@/src/constant/gallery"
+import { activityImages, dominicalImages, predicaImages, locationImages, talentoImages, generalImages } from "@/src/constant/gallery"
 import CounterTime from '@/Components/Common/CounterTime.vue';
 import MainLogo from '@/Components/MainLogo.vue';
 import Navbar from '@/Components/Common/Navbar.vue';
@@ -23,42 +23,42 @@ const galleries = reactive({
     visible: false,
     responsiveOptions: [
       {
-        breakpoint: '1500px',
+        breakpoint: "1500px",
         numVisible: 5,
       },
       {
-        breakpoint: '1024px',
+        breakpoint: "1024px",
         numVisible: 3,
       },
       {
-        breakpoint: '768px',
+        breakpoint: "768px",
         numVisible: 2,
       },
       {
-        breakpoint: '560px',
+        breakpoint: "560px",
         numVisible: 1,
       },
     ],
   },
   talent: {
-    images: activityImages,
+    images: talentoImages,
     activeIndex: 0,
     visible: false,
     responsiveOptions: [
       {
-        breakpoint: '1500px',
+        breakpoint: "1500px",
         numVisible: 5,
       },
       {
-        breakpoint: '1024px',
+        breakpoint: "1024px",
         numVisible: 3,
       },
       {
-        breakpoint: '768px',
+        breakpoint: "768px",
         numVisible: 2,
       },
       {
-        breakpoint: '560px',
+        breakpoint: "560px",
         numVisible: 1,
       },
     ],
@@ -69,44 +69,89 @@ const galleries = reactive({
     visible: false,
     responsiveOptions: [
       {
-        breakpoint: '1300px',
+        breakpoint: "1300px",
         numVisible: 4,
       },
       {
-        breakpoint: '1024px',
+        breakpoint: "1024px",
         numVisible: 3,
       },
       {
-        breakpoint: '768px',
+        breakpoint: "768px",
         numVisible: 2,
       },
       {
-        breakpoint: '400px',
+        breakpoint: "400px",
         numVisible: 1,
       },
     ],
   },
   general: {
-    images: galleryImages,
+    images: generalImages,
     activeIndex: 0,
     visible: false,
     responsiveOptions: [
       {
-        breakpoint: '1200px',
+        breakpoint: "1200px",
         numVisible: 4,
       },
       {
-        breakpoint: '768px',
+        breakpoint: "768px",
         numVisible: 3,
       },
       {
-        breakpoint: '480px',
+        breakpoint: "480px",
         numVisible: 2,
       },
     ],
   },
+  dominical: {
+    images: dominicalImages,
+    activeIndex: 0,
+    visible: false,
+    responsiveOptions: [
+      {
+        breakpoint: "1500px",
+        numVisible: 4,
+      },
+      {
+        breakpoint: "1024px",
+        numVisible: 3,
+      },
+      {
+        breakpoint: "768px",
+        numVisible: 2,
+      },
+      {
+        breakpoint: "560px",
+        numVisible: 1,
+      },
+    ],
+  },
+  predica: {
+    images: predicaImages,
+    activeIndex: 0,
+    visible: false,
+    responsiveOptions: [
+      {
+        breakpoint: "1400px",
+        numVisible: 4,
+      },
+      {
+        breakpoint: "1024px",
+        numVisible: 3,
+      },
+      {
+        breakpoint: "768px",
+        numVisible: 2,
+      },
+      {
+        breakpoint: "560px",
+        numVisible: 1,
+      },
+    ],
+  },
 });
-
 const openImage = (key, index) => {
   galleries[key].visible = true;
   galleries[key].activeIndex = index;
@@ -115,10 +160,10 @@ const openImage = (key, index) => {
 
 <template>
   <Navbar />
-  <div id="main" class="bg-logo-bg font-body">
-    <main class="flex flex-col items-center justify-center gap-5 text-white min-h-screen">
+  <div id="main" class="bg-logo-bg font-body pt-20 sm:pt-5">
+    <main class="flex flex-col items-center justify-center gap-5 text-white sm:min-h-screen pb-5">
       <div class="flex flex-col sm:flex-row justify-center items-center gap-2">
-        <h1 class="font-serif font-extralight text-4xl md:text-6xl uppercase mb-6 text-center">
+        <h1 class="font-extralight text-3xl sm:text-5xl md:text-7xl uppercase mb-6 text-center">
           Campamento <strong class="block mt-2 font-extrabold">CAF 2025</strong>
         </h1>
         
@@ -130,7 +175,7 @@ const openImage = (key, index) => {
           <p><strong class="font-extrabold">Retiro de carnaval</strong></p>
         </div>
         <div class="my-auto">
-          <p><strong class="font-extrabold">1 - 3 Marzo</strong></p>
+          <p><strong class="font-extrabold">1 - 4 de Marzo</strong></p>
           <p>Cotoca - Santa Cruz</p>
         </div>
         <div>
@@ -140,12 +185,12 @@ const openImage = (key, index) => {
       </div>
 
       <div class="mt-2 sm:mt-5 text-gray-300">
-        <CounterTime class="text-xl sm:text-3xl md:text-7xl font-extrabold" />
+        <CounterTime class="text-2xl sm:text-4xl md:text-6xl font-extrabold" />
       </div>
     </main>
   </div>
 
-  <section class="text-white bg-gray-700 py-10 min-h-screen p-4">
+  <section class="text-white bg-gray-700 py-10 min-h-screen p-4 overflow-x-hidden w-full">
     <section class="grid grid-cols-1 md:grid-cols-2 gap-6 w-4/5 mx-auto mb-10 content-center items-center mt-5">
       <!-- Descripción -->
       <div class="flex flex-col justify-center space-y-5">
@@ -168,29 +213,35 @@ const openImage = (key, index) => {
       </div>
 
       <!-- Galería de imágenes -->
-      <div class="relative rounded-lg overflow-hidden shadow-lg">
+      <div class="relative rounded-lg overflow-hidden shadow-lg w-full sm:w-2/3 mx-auto">
         <Galleria
-          v-model:activeIndex="galleries.dinamy.activeIndex"
-          :value="activityImages"
+          v-model:activeIndex="galleries.predica.activeIndex"
+          v-model:visible="galleries.predica.visible" 
+          :responsiveOptions="galleries.predica.responsiveOptions"
+          :value="galleries.predica.images"
           :circular="true"
           :showThumbnails="false"
           :showItemNavigators="true"
           class="rounded-lg"
+          containerStyle="max-width: 50rem" 
         >
           <template #item="slotProps">
             <img 
               :src="slotProps.item.src" 
               :alt="slotProps.item.alt" 
-              class="w-full h-80 object-cover"
+              class="w-full h-96 object-cover"
             />
+          </template>
+          <template #thumbnail="slotProps">
+            <img :src="slotProps.item.src" :alt="slotProps.item.alt" />
           </template>
         </Galleria>
       </div>
     </section>
 
-    <section class="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 rounded-2xl shadow-lg p-6 my-10 relative">
-      <div class="absolute -top-10 -left-10 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl"></div>
-      <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-500/20 rounded-full blur-3xl"></div>
+    <section class="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 rounded-2xl shadow-lg p-6 my-10 relative overflow-x-hidden">
+        <!-- <div class="absolute -top-10 -left-10 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-500/20 rounded-full blur-3xl"></div> -->
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         <!-- Texto descriptivo -->
@@ -208,11 +259,10 @@ const openImage = (key, index) => {
           </ul>
         </div>
 
-        <!-- Galería de imágenes -->
         <div class="relative overflow-hidden rounded-xl shadow-lg">
           <Galleria
-            v-model:activeIndex="galleries.dinamy.activeIndex"
-            :value="activityImages"
+            v-model:activeIndex="galleries.dominical.activeIndex"
+            :value="galleries.dominical.images"
             :circular="true"
             :showThumbnails="false"
             :showItemNavigators="true"
@@ -230,7 +280,7 @@ const openImage = (key, index) => {
       </div>
     </section>
     
-    <section id="activity" class="py-10 rounded-2xl">
+    <section id="activity" class="py-10 rounded-2xl overflow-x-hidden">
       <h3 class="text-center text-3xl sm:text-4xl mb-10 font-bold text-white">Actividades</h3>
       
       <div class="grid grid-cols-1 md:grid-cols-5 gap-10 px-4 md:px-10">
@@ -238,12 +288,12 @@ const openImage = (key, index) => {
         <section class="md:col-span-3 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-6 rounded-xl shadow-lg relative">
           <div class="absolute -top-8 -left-8 w-16 h-16 bg-gray-600/30 rounded-full blur-3xl"></div>
           <h4 class="text-2xl font-bold mb-6 text-center text-gray-200">Dinámicas</h4>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
             <!-- Galería -->
-            <div class="relative overflow-hidden">
+            <div class="relative md:col-span-2 overflow-hidden">
               <Galleria
                 v-model:activeIndex="galleries.dinamy.activeIndex"
-                :value="activityImages"
+                :value="galleries.dinamy.images"
                 :circular="true"
                 :showThumbnails="false"
                 :showItemNavigators="true"
@@ -253,7 +303,7 @@ const openImage = (key, index) => {
                   <img 
                     :src="slotProps.item.src" 
                     :alt="slotProps.item.alt" 
-                    class="w-full h-80 object-cover"
+                    class="w-full h-96 object-cover"
                   />
                 </template>
               </Galleria>
@@ -263,7 +313,7 @@ const openImage = (key, index) => {
               <p class="text-lg font-semibold text-gray-300 text-center">
                 Vive momentos únicos que combinan diversión y trabajo en equipo. 
               </p>
-              <ul class="list-disc list-inside text-gray-300 space-y-2">
+              <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm">
                 <li><strong>Circuitos:</strong> Desafíos llenos de emoción para escuadrones.</li>
                 <li><strong>Noche de Fogata:</strong> Reflexión y cantos bajo las estrellas.</li>
                 <li><strong>Competencias:</strong> Actividades llenas de creatividad y energía.</li>
@@ -278,8 +328,8 @@ const openImage = (key, index) => {
             <h4 class="text-2xl font-bold text-center mb-6 text-gray-200">Noche de talentos</h4>
             <div class="relative overflow-hidden">
               <Galleria
-                v-model:activeIndex="galleries.dinamy.activeIndex"
-                :value="activityImages"
+                v-model:activeIndex="galleries.talent.activeIndex"
+                :value="galleries.talent.images"
                 :circular="true"
                 :showThumbnails="false"
                 :showItemNavigators="true"
@@ -289,7 +339,7 @@ const openImage = (key, index) => {
                   <img 
                     :src="slotProps.item.src" 
                     :alt="slotProps.item.alt" 
-                    class="w-full h-80 object-cover"
+                    class="w-full h-96 object-cover"
                   />
                 </template>
               </Galleria>
@@ -299,20 +349,20 @@ const openImage = (key, index) => {
     </section>
   </section>
 
-  <section id="location" class="text-white bg-gray-800 py-10 min-h-screen flex flex-col justify-center items-center">
-    <h2 class="text-center font-extrabold text-4xl">Lugar del campamento</h2>
-    <div class="flex flex-col gap-2 text-slate-500 text-xl my-5">
+  <section id="location" class="text-white bg-gray-800 py-10 min-h-screen flex flex-col justify-center items-center overflow-x-hidden">
+    <h2 class="text-center font-extrabold text-2xl sm:text-4xl">Lugar del campamento</h2>
+    <div class="flex flex-col gap-2 text-slate-500 text-lg sm:text-xl my-5">
       <p class="text-center font-semibold">
-        1 - 3 de Marzo, 2025
+        1 - 4 de Marzo, 2025
         <i class="pi pi-clock"></i>
       </p>
       <p class="text-center font-semibold">
         Cotoca, Santa Cruz - Bolivia
-        <i class="pi pi-map-marker"></i>
+        <i class="pi pi-map-marker mt-2" style="font-size: 2rem"></i>
       </p>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 bg-slate-300 p-2 mx-5 my-2 rounded-2xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-slate-300 p-2 my-2 rounded-2xl">
       <div class="flex flex-row justify-center items-center ">
         <div class="">
           <h3 class="text-center font-extrabold underline text-2xl sm:text-3xl text-slate-900">Alista tus maletas</h3>
@@ -362,7 +412,7 @@ const openImage = (key, index) => {
               <img 
                 :src="slotProps.item.src" 
                 :alt="slotProps.item.alt" 
-                class="w-full h-[30rem]"
+                class="w-full h-[30rem] object-cover"
               />
             </template>
             <template #thumbnail="slotProps">
@@ -374,7 +424,7 @@ const openImage = (key, index) => {
     </div>
   </section>
 
-  <section id="gallery" class="min-h-screen bg-gradient-to-r from-slate-900 via-slate-700 to-slate-500 text-white py-5 flex flex-col justify-center items-center">
+  <section id="gallery" class="min-h-screen bg-gradient-to-r from-slate-900 via-slate-700 to-slate-500 text-white py-5 flex flex-col justify-center items-center overflow-x-hidden">
     <h3 class="text-center font-extrabold text-4xl mb-5">Momentos destacado del CAF 2024</h3>
 
     <div class="">
@@ -382,14 +432,14 @@ const openImage = (key, index) => {
         v-model:activeIndex="galleries.general.activeIndex" 
         v-model:visible="galleries.general.visible" 
         :responsiveOptions="galleries.general.responsiveOptions"
-        :value="galleryImages" 
+        :value="galleries.general.images" 
         :circular="true" 
         :showThumbnails="false"
         :showItemNavigators="true"
         :showItemNavigatorsOnHover="true"
         :numVisible="9"
         :fullScreen="true"
-        containerStyle="max-width: 80rem" 
+        containerStyle="max-width: 50rem" 
       >
         <template #item="slotProps">
           <img 
@@ -405,12 +455,12 @@ const openImage = (key, index) => {
 
       <div class="w-full grid grid-cols-12 gap-5" style="max-width: 100rem">
         <div 
-          v-for="(image, index) in galleryImages" 
+          v-for="(image, index) in generalImages" 
           :key="index" 
           class="col-span-12 sm:col-span-6 md:col-span-3 relative rounded-lg overflow-hidden shadow-md transform transition-transform hover:scale-105"
         >
           <img 
-            :src="image.thumbnail" 
+            :src="image.src" 
             :alt="image.alt" 
             class="w-72 h-72 object-cover cursor-pointer" 
             @click="openImage('general', index)" 
@@ -420,10 +470,10 @@ const openImage = (key, index) => {
     </div>
   </section>
 
-  <section id="questions" class="py-10 flex flex-col gap-5 justify-center items-center">
+  <section id="questions" class="py-10 flex flex-col gap-5 justify-around items-center min-h-screen overflow-x-hidden">
     <div>
       <h3 class="text-center font-semibold text-2xl sm:text-4xl mt-5 mb-2">Recomendaciones</h3>
-      <p class="text-xl mb-5">Descarga el siguiente PDF para ver las recomendaciones del CAF 2025</p>
+      <p class="text-lg sm:text-xl  text-center mb-5">Descarga el siguiente PDF para ver las recomendaciones del CAF 2025</p>
       <div>
         <a href="/pdf/GUIA_Y_RECOMENDACIONES_CAF_2025.pdf" 
           class="block text-center mb-1" download
@@ -477,12 +527,12 @@ const openImage = (key, index) => {
       </div>
     </div>
 
-    <div class="mt-10 text-gray-700 text-2xl sm:text-5xl">
+    <!-- <div class="mt-10 text-gray-700 text-2xl sm:text-5xl">
       <CounterTime />
-    </div>
+    </div> -->
   </section>
 
-  <footer class="h-40 bg-slate-800 text-white flex flex-col justify-center items-center">
+  <footer class="h-40 bg-slate-800 text-white flex flex-col justify-center items-center overflow-x-hidden">
     <h5 class="mb-2">
       <span class="font-extrabold text-2xl">CAF 2025</span>
     </h5>
@@ -504,9 +554,12 @@ const openImage = (key, index) => {
   </footer>
 </template>
 
-<style scoped>
+<style>
 .p-galleria {
   border: none;
+}
+h1, h2, h3 {
+  font-family: "League Spartan", serif;
 }
 </style>
 

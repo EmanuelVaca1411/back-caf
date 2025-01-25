@@ -36,10 +36,10 @@ onUnmounted(() => {
 
 <template>
   <nav :class="[
-    'fixed top-0 left-0 w-full z-50 transition-all duration-300 text-white text-xl tracking-widest',
+    'fixed top-0 left-0 w-full z-50 transition-all duration-300 text-white text-xl tracking-widest overflow-x-hidden',
     isNavbarVisible ? 'bg-gray-900 shadow-md translate-y-0' : '-translate-y-full'
   ]">
-    <div class="flex justify-between items-center py-2 px-4 max-w-7xl mx-auto">
+    <div class="flex justify-around lg:justify-between items-center py-2 px-4">
       <!-- Logo a la izquierda -->
       <a href="#main">
         <div class="flex items-center flex-shrink-0">
@@ -53,7 +53,7 @@ onUnmounted(() => {
         </div>
       </a>
 
-      <div class="hidden lg:flex flex-grow justify-end space-x-8">
+      <div class="hidden lg:flex flex-grow justify-end space-x-8 text-sm md:text-lg">
         <template v-for="option in options">
           <a
             :href="option.href"
@@ -75,7 +75,7 @@ onUnmounted(() => {
 
       <button
         @click="toggleMenu"
-        class="lg:hidden flex items-center justify-center w-8 h-8 hover:bg-gray-700 rounded focus:outline-none"
+        class="lg:hidden w-8 h-8 hover:bg-gray-700 rounded focus:outline-none"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -104,12 +104,12 @@ onUnmounted(() => {
 
     <div
       v-show="isMenuOpen"
-      class="lg:hidden flex flex-col items-center space-y-2 py-2 bg-gray-800"
+      class="lg:hidden flex flex-col items-center space-y-2 py-2 bg-gray-800 text-sm md:text-lg"
     >
       <template v-for="option in options">
         <a
           :href="option.href"
-          class="hover:text-orange-500 text-lg font-semibold transition duration-300"
+          class="hover:text-orange-500 font-semibold transition duration-300"
         >
           {{ option.name }}
         </a>

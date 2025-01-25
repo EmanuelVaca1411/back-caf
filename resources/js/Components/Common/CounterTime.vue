@@ -16,7 +16,7 @@ const handleCountdownEnd = () => {
 
 <template>
   <div class="text-center">
-    <h2 class="text-xl sm:text-2xl md:text-4xl font-semibold mb-4">Solo falta:</h2>
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">Solo falta:</h2>
     <Countdown
       :time="countdownTime"
       @countdownend="handleCountdownEnd"
