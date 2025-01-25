@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:10.23
+    container_name: postgres_10
+    ports:
+      - "5433:5432" # Mapea el puerto 5432 del contenedor al 5433 en el host
+    environment:
+      POSTGRES_USER: your_user
+      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: your_database
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persistencia de datos
+
+  phppgadmin:
+    image: dockage/phppgadmin
+    container_name: phppgadmin
+    depends_on:
+      - postgres
+    ports:
+      - "8080:80" # Mapea el puerto 80 del contenedor al 8080 en el host
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      PHP_PG_ADMIN_SERVER: postgres
+      PHP_PG_ADMIN_DEFAULT_DB: your_database
+      PHP_PG_ADMIN_DEFAULT_USER: your_user
+      PHP_PG_ADMIN_DEFAULT_PASSWORD: your_password
+
+volumes:
+  postgres_data:

@@ -1,0 +1,7 @@
+.logo-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+        url("/assets/textura.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
