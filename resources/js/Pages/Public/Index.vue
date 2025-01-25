@@ -218,7 +218,8 @@ const openImage = (key, index) => {
           v-model:activeIndex="galleries.predica.activeIndex"
           v-model:visible="galleries.predica.visible" 
           :responsiveOptions="galleries.predica.responsiveOptions"
-          :value="galleries.predica.images"
+          :value="predicaImages"
+          :autoPlay="true"
           :circular="true"
           :showThumbnails="false"
           :showItemNavigators="true"
@@ -231,9 +232,6 @@ const openImage = (key, index) => {
               :alt="slotProps.item.alt" 
               class="w-full h-96 object-cover"
             />
-          </template>
-          <template #thumbnail="slotProps">
-            <img :src="slotProps.item.src" :alt="slotProps.item.alt" />
           </template>
         </Galleria>
       </div>
@@ -262,10 +260,11 @@ const openImage = (key, index) => {
         <div class="relative overflow-hidden rounded-xl shadow-lg">
           <Galleria
             v-model:activeIndex="galleries.dominical.activeIndex"
-            :value="galleries.dominical.images"
+            :value="dominicalImages"
             :circular="true"
             :showThumbnails="false"
             :showItemNavigators="true"
+            :autoPlay="true"
             class="rounded-lg border border-gray-600"
           >
             <template #item="slotProps">
@@ -293,9 +292,11 @@ const openImage = (key, index) => {
             <div class="relative md:col-span-2 overflow-hidden">
               <Galleria
                 v-model:activeIndex="galleries.dinamy.activeIndex"
-                :value="galleries.dinamy.images"
+                :responsiveOptions="galleries.dinamy.responsiveOptions"
+                :value="activityImages"
                 :circular="true"
                 :showThumbnails="false"
+                :autoPlay="true"
                 :showItemNavigators="true"
                 class="rounded-lg shadow-md"
               >
@@ -329,9 +330,10 @@ const openImage = (key, index) => {
             <div class="relative overflow-hidden">
               <Galleria
                 v-model:activeIndex="galleries.talent.activeIndex"
-                :value="galleries.talent.images"
+                :value="talentoImages"
                 :circular="true"
                 :showThumbnails="false"
+                :autoPlay="true"
                 :showItemNavigators="true"
                 class="rounded-lg shadow-md"
               >
@@ -403,7 +405,7 @@ const openImage = (key, index) => {
           <Galleria
             v-model:activeIndex="galleries.location.activeIndex" 
             :value="locationImages" 
-            :responsiveOptions="galleries.location.responsiveOptions" 
+            :responsiveOptions="locationImages" 
             :numVisible="4"
             :circular="true" 
             :autoPlay="true"
@@ -439,7 +441,7 @@ const openImage = (key, index) => {
         :showItemNavigatorsOnHover="true"
         :numVisible="9"
         :fullScreen="true"
-        containerStyle="max-width: 50rem" 
+        containerStyle="max-width: 60rem" 
       >
         <template #item="slotProps">
           <img 
@@ -462,7 +464,7 @@ const openImage = (key, index) => {
           <img 
             :src="image.src" 
             :alt="image.alt" 
-            class="w-72 h-72 object-cover cursor-pointer" 
+            class="w-80 h-80 object-cover cursor-pointer" 
             @click="openImage('general', index)" 
           />
         </div>
@@ -532,9 +534,9 @@ const openImage = (key, index) => {
     </div> -->
   </section>
 
-  <footer class="h-40 bg-slate-800 text-white flex flex-col justify-center items-center overflow-x-hidden">
+  <footer class="bg-slate-800 text-white flex flex-col justify-center items-center overflow-x-hidden py-2">
     <h5 class="mb-2">
-      <span class="font-extrabold text-2xl">CAF 2025</span>
+      <span class="font-extrabold text-lg sm:text-2xl">CAF 2025</span>
     </h5>
     <div class="flex gap-5 text-center text-2xl">
       <a href="https://www.facebook.com" target="_blank">
@@ -544,12 +546,18 @@ const openImage = (key, index) => {
         <i class="pi pi-instagram"></i>
       </a>
     </div>
-    <div class="p-2 flex flex-col gap-1 text-center text-lg">
-      <p>Contacto Emanuel Vaca: </p>
-      <a href="https://wa.me/59162064184" target="_blank" class="text-green-500">
-        <i class="pi pi-whatsapp "></i>
-        62064184
-      </a>
+    <div class="p-2 flex flex-col gap-1 text-center text-sm md:text-lg">
+      <p class="text-lg mb-2">Contacto <strong>STAFF</strong>: </p>
+      <div class="flex flex-col sm:flex-row gap-5">
+        <a href="https://wa.me/59176009801" target="_blank" class="">
+          <i class="pi pi-whatsapp" style="color: #25d366;"></i>
+          Diego Gonzales - <strong>76009801</strong>
+        </a>
+        <a href="https://wa.me/59176009788" target="_blank" >
+          <i class="pi pi-whatsapp" style="color: #25d366;"></i>
+          Silvana Yabeta - <strong>76009788</strong>
+        </a>
+      </div>
     </div>
   </footer>
 </template>
