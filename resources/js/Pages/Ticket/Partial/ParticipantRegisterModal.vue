@@ -154,8 +154,20 @@ const submit = () => {
                     </TabPanels>
                 </Tabs>
                 <div class="flex justify-between gap-1 w-full md:px-5">
-                    <Button label="Cancelar" size="small" class="p-button-danger w-1/2 md:w-1/4 xl:w-1/5" @click="closeParticipantRegistrationModal" />
-                    <Button label="Guardar" size="small" type="submit" class="p-button-success w-1/2 md:w-1/4 xl:w-1/5" />
+                    <Button 
+                        label="Cancelar" 
+                        size="small" 
+                        class="p-button-danger w-1/2 md:w-1/4 xl:w-1/5" 
+                        :disabled="form.processing"
+                        @click="closeParticipantRegistrationModal" 
+                    />
+                    <Button 
+                        label="Guardar" 
+                        size="small" 
+                        type="submit" 
+                        :loading="form.processing"
+                        class="p-button-success w-1/2 md:w-1/4 xl:w-1/5" 
+                    />
                 </div>
             </form>
         </Dialog>

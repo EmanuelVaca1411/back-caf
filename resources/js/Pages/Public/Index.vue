@@ -192,7 +192,6 @@ const openImage = (key, index) => {
 
   <section class="text-white bg-gray-700 py-10 min-h-screen p-4 overflow-x-hidden w-full">
     <section class="grid grid-cols-1 md:grid-cols-2 gap-6 w-4/5 mx-auto mb-10 content-center items-center mt-5">
-      <!-- Descripción -->
       <div class="flex flex-col justify-center space-y-5">
         <h3 class="text-center text-3xl sm:text-4xl font-bold text-white">
           Ven a escuchar la palabra del Señor
@@ -212,8 +211,7 @@ const openImage = (key, index) => {
         </ul>
       </div>
 
-      <!-- Galería de imágenes -->
-      <div class="relative rounded-lg overflow-hidden shadow-lg w-full sm:w-2/3 mx-auto">
+      <div class="relative rounded-lg overflow-hidden shadow-lg w-full xl:w-2/3 mx-auto">
         <Galleria
           v-model:activeIndex="galleries.predica.activeIndex"
           v-model:visible="galleries.predica.visible" 
@@ -230,7 +228,7 @@ const openImage = (key, index) => {
             <img 
               :src="slotProps.item.src" 
               :alt="slotProps.item.alt" 
-              class="w-full h-96 object-cover"
+              class="w-full h-[30rem] sm:h-[40rem] object-cover"
             />
           </template>
         </Galleria>
@@ -271,7 +269,7 @@ const openImage = (key, index) => {
               <img 
                 :src="slotProps.item.src" 
                 :alt="slotProps.item.alt" 
-                class="w-full h-96 object-cover"
+                class="w-full h-[30rem] object-cover"
               />
             </template>
           </Galleria>
@@ -280,15 +278,13 @@ const openImage = (key, index) => {
     </section>
     
     <section id="activity" class="py-10 rounded-2xl overflow-x-hidden">
-      <h3 class="text-center text-3xl sm:text-4xl mb-10 font-bold text-white">Actividades</h3>
+      <!-- <h3 class="text-center text-3xl sm:text-4xl mb-10 font-bold text-white">Actividades</h3> -->
       
       <div class="grid grid-cols-1 md:grid-cols-5 gap-10 px-4 md:px-10">
-        <!-- Dinámicas -->
         <section class="md:col-span-3 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-6 rounded-xl shadow-lg relative">
           <div class="absolute -top-8 -left-8 w-16 h-16 bg-gray-600/30 rounded-full blur-3xl"></div>
-          <h4 class="text-2xl font-bold mb-6 text-gray-200">Dinámicas</h4>
+          <h4 class="text-2xl font-bold mb-6 text-gray-200">Actividades recreacionales</h4>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            <!-- Galería -->
             <div class="relative md:col-span-2 overflow-hidden">
               <Galleria
                 v-model:activeIndex="galleries.dinamy.activeIndex"
@@ -326,7 +322,7 @@ const openImage = (key, index) => {
         <!-- Noche de talentos -->
         <section class="md:col-span-2 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-6 rounded-xl shadow-lg relative">
             <div class="absolute -top-8 -right-8 w-16 h-16 bg-gray-600/30 rounded-full blur-3xl"></div>
-            <h4 class="text-2xl font-bold text-center mb-6 text-gray-200">Noche de talentos</h4>
+            <h4 class="text-2xl font-bold text-center mb-6 text-gray-200">Especiales</h4>
             <div class="relative overflow-hidden">
               <Galleria
                 v-model:activeIndex="galleries.talent.activeIndex"
@@ -383,14 +379,14 @@ const openImage = (key, index) => {
             </p>
             <div class="flex flex-col gap-3 text-slate-600 text-lg mt-5">
               <p class="text-center font-semibold">
-                1 - 3 de Marzo, 2025
+                1 - 4 de Marzo, 2025
                 <i class="pi pi-clock"></i>
               </p>
               <p class="text-center font-semibold">
                 Cotoca, Santa Cruz - Bolivia
               </p>
               <div class="">
-                <a href="" class="hover:text-slate-700 block text-center">
+                <a href="https://www.google.com/maps?q=-17.75814393864235,-63.0112437" class="hover:text-slate-700 block text-center" target="_blank" rel="noopener noreferrer">
                   <i class="pi pi-map-marker text-5xl" style="font-size: 5rem"></i>
                 </a>
                 <p class="text-sm font-semibold text-center">Click para abrir ubicación</p>
@@ -405,8 +401,8 @@ const openImage = (key, index) => {
           <Galleria
             v-model:activeIndex="galleries.location.activeIndex" 
             :value="locationImages" 
-            :responsiveOptions="locationImages" 
-            :numVisible="4"
+            :responsiveOptions="galleries.location.responsiveOptions" 
+            :numVisible="6"
             :circular="true" 
             :autoPlay="true"
           >
@@ -414,11 +410,11 @@ const openImage = (key, index) => {
               <img 
                 :src="slotProps.item.src" 
                 :alt="slotProps.item.alt" 
-                class="w-full h-[30rem] object-cover"
+                class="w-full h-[25rem] sm:h-[40rem] object-cover"
               />
             </template>
             <template #thumbnail="slotProps">
-                <img :src="slotProps.item.src" :alt="slotProps.item.alt" />
+                <img :src="slotProps.item.src" :alt="slotProps.item.alt" class="w-full h-36 sm:h-52" />
             </template>
           </Galleria>
         </div>
@@ -487,11 +483,11 @@ const openImage = (key, index) => {
     </div>
     <div class="flex flex-col gap-5 justify-center items-center">
       <h3 class="text-center font-bold text-2xl sm:text-4xl mt-5">Preguntas frecuentes</h3>
-      <div class="w-full">
+      <div class="w-full text-xl sm:text-2xl">
         <Accordion :value="['0']" multiple>
           <AccordionPanel value="0">
             <AccordionHeader>
-              <h4 class="text-xl sm:text-2xl font-extrabold">
+              <h4 class="font-extrabold">
                 01 Cuál sera el precio de la inscripción?
               </h4>
             </AccordionHeader>
@@ -503,7 +499,7 @@ const openImage = (key, index) => {
           </AccordionPanel>
           <AccordionPanel value="1">
             <AccordionHeader>
-              <h4 class="text-xl sm:text-2xl font-extrabold">
+              <h4 class="font-extrabold">
                 02 Está permitido el uso de celulares o dispositivos electrónicos?
               </h4>
             </AccordionHeader>
@@ -515,8 +511,8 @@ const openImage = (key, index) => {
           </AccordionPanel>
           <AccordionPanel value="2">
             <AccordionHeader>
-              <h4 class="text-xl sm:text-2xl font-extrabold">
-                02 Qué debo llevar?
+              <h4 class="font-extrabold">
+                03 Qué debo llevar?
               </h4>
             </AccordionHeader>
             <AccordionContent>

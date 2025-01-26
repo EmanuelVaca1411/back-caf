@@ -28,7 +28,7 @@ const registerTicket = () => {
 
         <div class="w-10/12 flex justify-between items-center mx-auto mt-5">
             <h1 class="font-bold">Venta de tickets</h1>
-            <Button label="Registrar venta" :onclick="registerTicket" />
+            <Button label="Registrar ticket" :onclick="registerTicket" />
         </div>
 
         <TicketPurchaseModal />

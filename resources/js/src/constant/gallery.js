@@ -13,39 +13,49 @@ function generateImagePaths(gallery) {
 }
 
 const activityGallery = {
-      folder: `${folder}/activity`,
+      folder: `${folder}/ACTIVIDADES_RECREACIONALES`,
       count: 9,
 };
 
 const dominicalGallery = {
-      folder: `${folder}/dominical`,
+      folder: `${folder}/ESCUELA_DOMINICAL`,
       count: 6,
 };
 
-const generalGallery = {
-      folder: `${folder}/general`,
-      count: 12,
+const servidoresGallery = {
+      folder: `${folder}/SERVIDORES`,
+      title: 'Servidores',
+      count: 6,
+};
+
+const familyGallery = {
+      folder: `${folder}/TIEMPO_EN_FAMILIA`,
+      title: 'Tiempo en familia',
+      count: 6,
 };
 
 const locationGallery = {
-      folder: `${folder}/location`,
-      count: 4,
+      folder: `${folder}/UBICACION`,
+      count: 37,
 };
 
 const predicaGallery = {
-      folder: `${folder}/predica`,
+      folder: `${folder}/ALABANZAS(ADORACION-JUBILO)`,
       count: 6,
 };
 
 const talentoGallery = {
-      folder: `${folder}/talento`,
+      folder: `${folder}/ESPECIALES`,
       count: 6,
 };
 
 // Generar los arrays de rutas para cada galería.
 export const activityImages = generateImagePaths(activityGallery);
 export const dominicalImages = generateImagePaths(dominicalGallery);
-export const generalImages = generateImagePaths(generalGallery);
+export const generalImages = [
+      ...generateImagePaths(servidoresGallery), 
+      ...generateImagePaths(familyGallery)
+];
 export const locationImages = generateImagePaths(locationGallery);
 export const predicaImages = generateImagePaths(predicaGallery);
 export const talentoImages = generateImagePaths(talentoGallery);

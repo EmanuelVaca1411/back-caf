@@ -18,7 +18,7 @@ class TicketPaymentController extends Controller
         $request->validate([
             'ticket_purchase_id' => 'required|exists:ticket_purchases,id',
             'type_payment_id' => 'required|exists:type_payments,id',
-            'amount' => 'required|numeric',
+            'amount' => 'required|numeric|min:1',
             'image' => $request->type_payment_id == 2 ? 'required|image' : '',
         ]);
 
@@ -34,6 +34,6 @@ class TicketPaymentController extends Controller
 
         $ticketPayment->save();
 
-        return to_route('tickets.edit', $request->ticket_purchase_id);
+        return to_route('admin.tickets.edit', $request->ticket_purchase_id);
     }
 }

@@ -21,7 +21,7 @@ const form = useForm({
 });
 
 const submitForm = () => {
-    form.post('/tickets', {
+    form.post(route('admin.tickets.store'), {
         onSuccess: () => {
             toast.add({ severity: 'success', summary: 'Éxito', detail: 'Ticket registrado exitosamente', life: 3000 });
             localStorage.removeItem('formData'); // Limpiar datos después del envío
@@ -54,8 +54,20 @@ const submitForm = () => {
             </TabPanels>
         </Tabs>   
         <div class="flex justify-between gap-1 w-full md:px-5 mt-5">
-            <Button label="Cancelar" size="small" class="p-button-danger w-1/2 md:w-1/4 xl:w-1/5" @click="closeTicketPurchaseModal" />
-            <Button type="submit" size="small" label="Registrar" class="w-1/2 md:w-1/4 xl:w-1/5"/>
+            <Button 
+                label="Cancelar" 
+                size="small" 
+                class="p-button-danger w-1/2 md:w-1/4 xl:w-1/5" 
+                :disabled="form.processing"
+                @click="closeTicketPurchaseModal" 
+            />
+            <Button 
+                type="submit" 
+                size="small" 
+                label="Registrar"
+                :loading="form.processing"
+                class="w-1/2 md:w-1/4 xl:w-1/5"
+            />
         </div>
     </form>
 </template>

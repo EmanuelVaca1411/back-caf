@@ -42,7 +42,7 @@ const removeParticipant = (participantId) => {
         <h4 class="text-base font-medium mb-2">Buscar campista</h4>
 
         <div>
-            <div class="flex items-center gap-2">
+            <div class="flex justify-between items-center gap-2">
                 <Select
                     input-id="participant_id"
                     v-model="selectedParticipant"
@@ -67,7 +67,7 @@ const removeParticipant = (participantId) => {
                         </div>
                     </template>
                 </Select>
-                <Button label="Agregar" @click="addParticipant" class="p-button-outlined" />
+                <Button label="Agregar" @click="addParticipant" class="p-button-outlined w-full sm:w-1/3" />
             </div>
             <InputError class="mt-2" :message="form.errors.participants" />
         </div>

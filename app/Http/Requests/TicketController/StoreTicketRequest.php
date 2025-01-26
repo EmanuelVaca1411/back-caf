@@ -24,7 +24,7 @@ class StoreTicketRequest extends FormRequest
         return [
             'participants' => 'required|array|min:1',
             'participants.*.id' => 'required|integer|exists:participants,id',
-            'amount' => 'required|numeric',
+            'amount' => 'required|numeric|min:1',
             'type_payment_id' => 'required|integer|exists:type_payments,id',
         ];
     }

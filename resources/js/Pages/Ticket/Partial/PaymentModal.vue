@@ -109,15 +109,15 @@ const submit = () => {
                 </div>
             </div>
 
-            <div v-if="form.type_payment_id === 2" class="flex flex-col justify-center items-center">
+            <!-- <div v-if="form.type_payment_id === 2" class="flex flex-col justify-center items-center">
                 <label for="" class="font-semibold text-center">Escanea el QR</label>
                 <Image src="/QR.jpg" alt="Image" preview  width="250" />
-            </div>
+            </div> -->
 
             <div v-if="form.type_payment_id === 2" class="flex flex-col items-center gap-2">
                 <label class="text-base font-medium" for="reference">Subir comprobante</label>
                 <div class="card flex flex-col items-center gap-6">
-                    <FileUpload mode="basic" @select="onFileSelect" customUpload auto severity="secondary" class="p-button-outlined" />
+                    <FileUpload mode="basic" @select="onFileSelect" customUpload auto severity="secondary"  class="p-button-outlined" accept="image/*" />
                     <img v-if="src" :src="src" alt="Image" class="shadow-md rounded-xl w-52 h-52" style="filter: grayscale(100%)" />
                 </div>
             </div>
