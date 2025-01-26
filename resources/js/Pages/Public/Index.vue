@@ -18,7 +18,6 @@ const props = defineProps({
 
 const galleries = reactive({
   dinamy: {
-    images: activityImages,
     activeIndex: 0,
     visible: false,
     responsiveOptions: [
@@ -41,7 +40,6 @@ const galleries = reactive({
     ],
   },
   talent: {
-    images: talentoImages,
     activeIndex: 0,
     visible: false,
     responsiveOptions: [
@@ -64,7 +62,6 @@ const galleries = reactive({
     ],
   },
   location: {
-    images: locationImages,
     activeIndex: 0,
     visible: false,
     responsiveOptions: [
@@ -87,7 +84,6 @@ const galleries = reactive({
     ],
   },
   general: {
-    images: generalImages,
     activeIndex: 0,
     visible: false,
     responsiveOptions: [
@@ -106,7 +102,6 @@ const galleries = reactive({
     ],
   },
   dominical: {
-    images: dominicalImages,
     activeIndex: 0,
     visible: false,
     responsiveOptions: [
@@ -129,7 +124,6 @@ const galleries = reactive({
     ],
   },
   predica: {
-    images: predicaImages,
     activeIndex: 0,
     visible: false,
     responsiveOptions: [
