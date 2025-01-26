@@ -124,6 +124,7 @@ const galleries = reactive({
     ],
   },
   predica: {
+    images: predicaImages,
     activeIndex: 0,
     visible: false,
     responsiveOptions: [
@@ -184,7 +185,7 @@ const openImage = (key, index) => {
     </main>
   </div>
 
-  <section class="text-white bg-gray-700 py-10 min-h-screen p-4 overflow-x-hidden w-full">
+  <section class="text-white bg-gray-700 py-10 min-h-screen sm:p-4 overflow-x-hidden w-full">
     <section class="grid grid-cols-1 md:grid-cols-2 gap-6 w-4/5 mx-auto mb-10 content-center items-center mt-5">
       <div class="flex flex-col justify-center space-y-5">
         <h3 class="text-center text-3xl sm:text-4xl font-bold text-white">
@@ -229,7 +230,7 @@ const openImage = (key, index) => {
       </div>
     </section>
 
-    <section class="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 rounded-2xl shadow-lg p-6 my-10 relative overflow-x-hidden">
+    <section class="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 rounded-2xl shadow-lg py-2 sm:py-0 my-10 relative overflow-x-hidden">
         <!-- <div class="absolute -top-10 -left-10 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl"></div>
         <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-500/20 rounded-full blur-3xl"></div> -->
 
@@ -274,7 +275,7 @@ const openImage = (key, index) => {
     <section id="activity" class="py-10 rounded-2xl overflow-x-hidden">
       <!-- <h3 class="text-center text-3xl sm:text-4xl mb-10 font-bold text-white">Actividades</h3> -->
       
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 px-4 md:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 md:px-10">
         <section class="md:col-span-3 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-6 rounded-xl shadow-lg relative">
           <div class="absolute -top-8 -left-8 w-16 h-16 bg-gray-600/30 rounded-full blur-3xl"></div>
           <h4 class="text-2xl font-bold mb-6 text-gray-200">Actividades recreacionales</h4>
@@ -424,7 +425,7 @@ const openImage = (key, index) => {
         v-model:activeIndex="galleries.general.activeIndex" 
         v-model:visible="galleries.general.visible" 
         :responsiveOptions="galleries.general.responsiveOptions"
-        :value="galleries.general.images" 
+        :value="generalImages" 
         :circular="true" 
         :showThumbnails="false"
         :showItemNavigators="true"
