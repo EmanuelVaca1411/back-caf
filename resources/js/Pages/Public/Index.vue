@@ -188,9 +188,7 @@ const openImage = (key, index) => {
             >
                 <div class="my-auto">
                     <p>
-                        <strong class="font-extrabold"
-                            >Retiro de carnaval</strong
-                        >
+                        <strong class="font-bold">Retiro de carnaval</strong>
                     </p>
                 </div>
                 <div class="my-auto">
