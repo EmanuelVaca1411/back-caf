@@ -1,4 +1,5 @@
 <script setup>
+import { reactive, ref, onMounted } from "vue";
 import {
     activityImages,
     dominicalImages,
@@ -18,13 +19,12 @@ import {
     Button,
     Galleria,
 } from "primevue";
-import { reactive, ref } from "vue";
 import "atropos/css"; // Importa los estilos de Atropos
 
 // Registra el web component al montar el componente
-import("atropos").then(({ default: Atropos }) => {
-    Atropos(); // Inicializa Atropos globalmente
-});
+// import("atropos").then(({ default: Atropos }) => {
+//     Atropos(); // Inicializa Atropos globalmente
+// });
 
 const galleries = reactive({
     dinamy: {
@@ -162,6 +162,12 @@ const openImage = (key, index) => {
     galleries[key].visible = true;
     galleries[key].activeIndex = index;
 };
+
+onMounted(() => {
+    import("atropos").then(({ default: Atropos }) => {
+        new Atropos(); // Solo cuando el componente está montado
+    });
+});
 </script>
 
 <template>
@@ -683,10 +689,6 @@ const openImage = (key, index) => {
                 </Accordion>
             </div>
         </div>
-
-        <!-- <div class="mt-10 text-gray-700 text-2xl sm:text-5xl">
-      <CounterTime />
-    </div> -->
     </section>
 
     <footer
