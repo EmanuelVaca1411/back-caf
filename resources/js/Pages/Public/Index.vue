@@ -232,13 +232,13 @@ onMounted(() => {
                     Ven a escuchar la palabra del Señor
                 </h3>
                 <p class="text-lg text-gray-300 leading-relaxed">
-                    Durante el campamento, podrás participar en tiempos de
-                    <strong>alabanza</strong>, donde la música y el gozo
-                    llenarán el ambiente, conectándote con el Señor a través de
-                    canciones inspiradoras. También serás parte de
-                    <strong>predicaciones</strong> que transformarán tu vida,
-                    guiadas por pastores y líderes dedicados a compartir
-                    mensajes llenos de sabiduría y amor.
+                    Durante el campamento, tendremos tiempo de
+                    <strong>alabanzas</strong> y <strong>adoración</strong>,
+                    donde la música y el gozo llenerán el ambiente, conectándote
+                    con Dios a través de las alabanzas y la ministración.
+                    También podrás ser parte de poderosas palabras que
+                    transformaran tu vida, a través de Pastores y Siervos
+                    dedicados a compartir mensajes llenos de sabiduría y amor.
                 </p>
                 <ul class="list-disc list-inside text-gray-300">
                     <li>Momentos de alabanza con música en vivo.</li>
@@ -475,11 +475,11 @@ onMounted(() => {
                         class="text-slate-800 max-w-screen-md flex flex-col gap-5 text-lg p-2 sm:p-10 rounded-lg"
                     >
                         <p>
-                            Imagina un lugar donde las predicaciones
-                            inspiradoras transformarán tu corazón, el
-                            compañerismo fortalecerá tus lazos con otros
-                            campistas y los juegos crearán recuerdos que
-                            perdurarán para siempre.
+                            Imagina un lugar donde los devocionales y predicas
+                            inspiradoras transformarán tu corazón, donde el
+                            compañerismo fortalecerá los lazos con nuevos
+                            hermanos, y los juegos y actividades crearán
+                            recuerdos que perdurarán para siempre.
                         </p>
                         <p>
                             En el <strong class="font-extrabold">CAF</strong>,
@@ -488,8 +488,9 @@ onMounted(() => {
                             compañerismo.
                         </p>
                         <p>
-                            ¿Estás listo para vivir una semana de bendición en
-                            el <strong>Campamento CAF 2025?</strong>
+                            ¿Estás listo para vivir 3 días de bendición y
+                            diversión en nuestro Campamento
+                            <strong>CAF 2025?</strong>
                             <span class="block">
                                 ¡Te esperamos con los brazos abiertos!
                             </span>
@@ -653,7 +654,7 @@ onMounted(() => {
                         </AccordionHeader>
                         <AccordionContent>
                             <p class="m-0 text-lg sm:text-lg font-semibold">
-                                El precio de la inscripción sera de 250 Bs.
+                                El precio de la inscripción sera de 300 Bs.
                             </p>
                         </AccordionContent>
                     </AccordionPanel>
