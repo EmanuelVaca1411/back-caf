@@ -241,14 +241,15 @@ onMounted(() => {
                     dedicados a compartir mensajes llenos de sabiduría y amor.
                 </p>
                 <ul class="list-disc list-inside text-gray-300">
-                    <li>Momentos de alabanza con música en vivo.</li>
-                    <li>Prédicas poderosas que fortalecerán tu fe.</li>
+                    <li>Tiempo de alabanzas y adoración.</li>
+                    <li>Predicas poderosas que fortalecerán tu fe.</li>
                     <li>
-                        Un espacio para reflexionar y crecer espiritualmente.
+                        Un tiempo de conexión con Dios para reflexionar y crecer
+                        espiritualmente.
                     </li>
                     <li>
-                        Oportunidad de formar lazos con otros campistas en la
-                        fe.
+                        Oportunidad de formar y crear lazos con nuevos hermanos
+                        en Cristo.
                     </li>
                 </ul>
             </div>
