@@ -14,7 +14,7 @@
     <!-- Meta Open Graph para compartir en redes sociales -->
     <meta property="og:title" content="{{ config('app.name', 'CAF 2025') }}">
     <meta property="og:description" content="Únete al Campamento CAF 2025 en Cotoca, Santa Cruz. Un tiempo de adoración, predicación y comunión cristiana. ¡Te esperamos!">
-    <meta property="og:image" content="{{ asset('images/logo_caf.png') }}">
+    <meta property="og:image" content="{{ asset('images/foto_link.jpg') }}">
     <meta property="og:image:alt" content="Imagen promocional del Campamento CAF 2025">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
