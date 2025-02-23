@@ -9,7 +9,7 @@
     <meta name="description" content="Únete al Campamento CAF 2025, un retiro espiritual en Cotoca, Santa Cruz. Vive un tiempo de alabanza, predicación y actividades recreativas que fortalecerán tu fe.">
   
     <!-- Meta keywords -->
-    <meta name="keywords" content="Retiro espiritual, Campamento cristiano, CAF 2025, retiro de carnaval, retiro cristiano, Santa Cruz, Bolivia, iglesia, alabanzas, predicaciones">
+    <meta name="keywords" content="Ministerio internacional, Cristo Salva, Retiro espiritual, Campamento cristiano, CAF 2025, retiro de carnaval, retiro cristiano, Santa Cruz, Bolivia, iglesia, alabanzas, predicaciones">
 
     <!-- Meta Open Graph para compartir en redes sociales -->
     <meta property="og:title" content="{{ config('app.name', 'CAF 2025') }}">
