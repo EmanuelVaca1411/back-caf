@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', [PublicTicketController::class, 'index'])->name('tickets.index');
+Route::get('/visit', [PublicTicketController::class, 'visit'])->name('tickets.visit');
 
 // Route::get('/tickets/create', [PublicTicketController::class, 'create'])->name('tickets.create');
 
