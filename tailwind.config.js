@@ -18,8 +18,7 @@ export default {
                 body: ["Roboto", ...defaultTheme.fontFamily.sans],
             },
             backgroundImage: {
-                "logo-bg":
-                    "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('/resources/assets/textura.webp')",
+                "logo-bg": "url('/resources/assets/textura.webp')",
             },
         },
     },

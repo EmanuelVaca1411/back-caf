@@ -1,1 +1,0 @@
-import{f as s,b as o,t as c,o as i}from"./app-BsH7gpBw.js";const a={class:"h-screen flex items-center justify-center"},n={class:"text-6xl font-bold"},f={__name:"Visit",props:{visit:Number},setup(e){return(r,l)=>{var t;return i(),s("div",a,[o("h1",n,"Visitas: "+c((t=e.visit)==null?void 0:t.count),1)])}}};export{f as default};

@@ -172,51 +172,711 @@ onMounted(() => {
 
 <template>
     <Navbar />
-    <div id="main" class="bg-logo-bg font-body pt-20 sm:pt-5">
-        <main
-            class="flex flex-col items-center justify-center gap-5 text-white sm:min-h-screen pb-5"
-        >
-            <div
-                class="flex flex-col sm:flex-row justify-center items-center gap-2"
+    <div class="bg-logo-bg">
+        <div id="main" class="font-body pt-20 sm:pt-5">
+            <main
+                class="flex flex-col items-center justify-center gap-5 text-white sm:min-h-screen pb-5"
             >
-                <h1
-                    class="font-extralight text-3xl sm:text-5xl md:text-7xl uppercase mb-6 text-center"
+                <div
+                    class="flex flex-col sm:flex-row justify-center items-center gap-2"
                 >
-                    Campamento
-                    <strong class="block mt-2 font-extrabold">CAF 2025</strong>
-                </h1>
+                    <h1
+                        class="font-extralight text-3xl sm:text-5xl md:text-7xl uppercase mb-6 text-center"
+                    >
+                        Campamento
+                        <strong class="block mt-2 font-extrabold"
+                            >CAF 2025</strong
+                        >
+                    </h1>
 
-                <MainLogo />
-            </div>
+                    <MainLogo />
+                </div>
 
-            <div
-                class="bg-white/20 backdrop-blur-md rounded-lg p-2 sm:p-6 w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-5 text-center text-lg text-gray-300 sm:text-2xl tracking-wider"
+                <div
+                    class="bg-white/20 backdrop-blur-md rounded-lg p-2 sm:p-6 w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-5 text-center text-lg text-gray-300 sm:text-2xl tracking-wider"
+                >
+                    <div class="my-auto">
+                        <p>
+                            <strong class="font-bold"
+                                >Retiro de carnaval</strong
+                            >
+                        </p>
+                    </div>
+                    <div class="my-auto">
+                        <p>
+                            <strong class="font-extrabold"
+                                >1 - 4 de Marzo</strong
+                            >
+                        </p>
+                        <p>Cotoca - Santa Cruz</p>
+                    </div>
+                    <div>
+                        <p>Inscripción</p>
+                        <p>
+                            <strong class="font-extrabold">300 Bs</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-2 sm:mt-5 text-gray-300">
+                    <CounterTime
+                        class="text-2xl sm:text-4xl md:text-6xl font-extrabold"
+                    />
+                </div>
+            </main>
+        </div>
+
+        <div
+            class="mx-auto w-full max-w-6xl p-4 rounded-lg overflow-hidden uppercase"
+        >
+            <h1
+                class="text-white text-3xl md:text-5xl font-bold text-center mb-6"
             >
-                <div class="my-auto">
-                    <p>
-                        <strong class="font-bold">Retiro de carnaval</strong>
-                    </p>
-                </div>
-                <div class="my-auto">
-                    <p>
-                        <strong class="font-extrabold">1 - 4 de Marzo</strong>
-                    </p>
-                    <p>Cotoca - Santa Cruz</p>
-                </div>
-                <div>
-                    <p>Inscripción</p>
-                    <p>
-                        <strong class="font-extrabold">300 Bs</strong>
-                    </p>
-                </div>
+                CRONOGRAMA DE ACTIVIDADES
+            </h1>
+
+            <div class="hidden md:block">
+                <table
+                    class="w-full border-collapse border border-gray-300 text-white text-sm md:text-base"
+                >
+                    <thead>
+                        <tr class="bg-gray-800 text-white text-left">
+                            <th class="border border-gray-400 px-4 py-2">
+                                Día
+                            </th>
+                            <th class="border border-gray-400 px-4 py-2">
+                                Hora
+                            </th>
+                            <th class="border border-gray-400 px-4 py-2">
+                                Actividad
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sábado -->
+                        <tr>
+                            <td
+                                class="border border-gray-400 px-4 py-2 font-bold"
+                                rowspan="3"
+                            >
+                                Sábado 01-03-2025
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                17:00 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Puertas abiertas del campamento
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                19:30 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Cena bienvenida
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                20:30 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Inicio del servicio de apertura "CAF - 2025"
+                            </td>
+                        </tr>
+
+                        <!-- Domingo -->
+                        <tr>
+                            <td
+                                class="border border-gray-400 px-4 py-2 font-bold"
+                                rowspan="13"
+                            >
+                                Domingo 02-03-2025
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                07:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Devocional
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                07:30 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Aseo personal
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                08:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Desayuno
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                08:30 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Tiempo libre
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                09:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Previas
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                10:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Inicia el culto
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                12:30 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Almuerzo
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                13:30 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Tiempo libre
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                14:30 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Inicio de actividades de campo
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                16:00 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Tiempo libre
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                17:00 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Aseo personal
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                19:00 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                20:00 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Inicia el culto
+                            </td>
+                        </tr>
+
+                        <!-- Lunes -->
+                        <tr>
+                            <td
+                                class="border border-gray-400 px-4 py-2 font-bold"
+                                rowspan="13"
+                            >
+                                Lunes 03-03-2025
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                07:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Devocional
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                07:30 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Aseo personal
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                08:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Desayuno
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                08:30 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Tiempo libre
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                09:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Previas
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                10:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Inicia el culto
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                12:30 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Almuerzo
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                13:30 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Tiempo libre
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                14:30 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Inicio de actividades de campo
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                16:00 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Tiempo libre
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                17:00 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Aseo personal
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                19:00 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Cena
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                20:00 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Inicia el culto
+                            </td>
+                        </tr>
+
+                        <!-- Martes -->
+                        <tr>
+                            <td
+                                class="border border-gray-400 px-4 py-2 font-bold"
+                                rowspan="10"
+                            >
+                                Martes 04-03-2025
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                07:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Devocional
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                07:30 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Aseo personal
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                08:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Desayuno
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                08:30 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Tiempo libre
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                09:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Previas
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                10:00 AM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Inicia el culto
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                12:30 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Almuerzo
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                14:30 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Inicio de activiadades de campo
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                17:00 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Clausura, oración y limpieza
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400 px-4 py-2">
+                                17:30 PM
+                            </td>
+                            <td class="border border-gray-400 px-4 py-2">
+                                Congregación a sus hogares
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <div class="mt-2 sm:mt-5 text-gray-300">
-                <CounterTime
-                    class="text-2xl sm:text-4xl md:text-6xl font-extrabold"
-                />
+            <div class="md:hidden">
+                <div class="text-white space-y-6">
+                    <!-- Día en formato vertical con separación -->
+                    <div class="border border-gray-400 p-4 rounded-lg">
+                        <h2
+                            class="text-lg font-bold border-b border-gray-400 pb-2 text-center"
+                        >
+                            Sábado 01-03-2025
+                        </h2>
+                        <div class="mt-2 space-y-4 text-sm">
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">17:00 PM</span>
+                                <span>Puertas abiertas del campamento</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">19:30 PM</span>
+                                <span>Cena bienvenida</span>
+                            </div>
+                            <div class="flex gap-2 justify-between">
+                                <span class="font-semibold">20:30 PM</span>
+                                <span
+                                    >Inicio del servicio de apertura "CAF -
+                                    2025"</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Domingo -->
+                    <div class="border border-gray-400 p-4 rounded-lg">
+                        <h2
+                            class="text-lg font-bold border-b border-gray-400 pb-2"
+                        >
+                            Domingo 02-03-2025
+                        </h2>
+                        <div class="mt-2 space-y-4 text-sm">
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">07:00 AM</span>
+                                <span>Devocional</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">07:30 AM</span>
+                                <span>Aseo personal</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">08:00 AM</span>
+                                <span>Desayuno</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">08:30 AM</span>
+                                <span>Tiempo libre</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">09:00 AM</span>
+                                <span>Previas</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">10:00 AM</span>
+                                <span>Inicia el culto</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">12:30 PM</span>
+                                <span>Almuerzo</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">13:30 PM</span>
+                                <span>Tiempo libre</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">14:30 PM</span>
+                                <span>Inicio de actividades de campo</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">16:00 PM</span>
+                                <span>Tiempo libre</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">17:00 PM</span>
+                                <span>Aseo personal</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">19:00 PM</span>
+                                <span>Cena</span>
+                            </div>
+                            <div class="flex gap-2 justify-between">
+                                <span class="font-semibold">20:00 PM</span>
+                                <span>Inicia el culto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lunes -->
+                    <div class="border border-gray-400 p-4 rounded-lg">
+                        <h2
+                            class="text-lg font-bold border-b border-gray-400 pb-2"
+                        >
+                            Lunes 03-03-2025
+                        </h2>
+                        <div class="mt-2 space-y-4 text-sm">
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">07:00 AM</span>
+                                <span>Devocional</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">07:30 AM</span>
+                                <span>Aseo personal</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">08:00 AM</span>
+                                <span>Desayuno</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">08:30 AM</span>
+                                <span>Tiempo libre</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">09:00 AM</span>
+                                <span>Previas</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">10:00 AM</span>
+                                <span>Inicia el culto</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">12:30 PM</span>
+                                <span>Almuerzo</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">13:30 PM</span>
+                                <span>Tiempo libre</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">14:30 PM</span>
+                                <span>Inicio de actividades de campo</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">16:00 PM</span>
+                                <span>Tiempo libre</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">17:00 PM</span>
+                                <span>Aseo personal</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">19:00 PM</span>
+                                <span>Cena</span>
+                            </div>
+                            <div class="flex gap-2 justify-between">
+                                <span class="font-semibold">20:00 PM</span>
+                                <span>Inicia el culto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Martes -->
+                    <div class="border border-gray-400 p-4 rounded-lg">
+                        <h2
+                            class="text-lg font-bold border-b border-gray-400 pb-2"
+                        >
+                            Martes 04-03-2025
+                        </h2>
+                        <div class="mt-2 space-y-4 text-sm">
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">07:00 AM</span>
+                                <span>Devocional</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">07:30 AM</span>
+                                <span>Aseo personal</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">08:00 AM</span>
+                                <span>Desayuno</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">08:30 AM</span>
+                                <span>Tiempo libre</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">09:00 AM</span>
+                                <span>Previas</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">10:00 AM</span>
+                                <span>Inicia el culto</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">12:30 PM</span>
+                                <span>Inicia el culto</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">14:30 PM</span>
+                                <span>Inicio de actividades de campo</span>
+                            </div>
+                            <div
+                                class="flex gap-2 justify-between border-b border-gray-400 pb-2"
+                            >
+                                <span class="font-semibold">17:00 PM</span>
+                                <span>Clausura, oración y limpieza</span>
+                            </div>
+                            <div class="flex gap-2 justify-between">
+                                <span class="font-semibold">17:30 PM</span>
+                                <span>Congregación a sus hogares</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </main>
+        </div>
     </div>
 
     <section
