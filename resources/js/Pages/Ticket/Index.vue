@@ -16,7 +16,7 @@ const props = defineProps({
 
 const { tickets } = toRefs(props)
 const { openTicketModal, openTicketPurchaseModal  } = useTicketStore();
-
+¡
 const registerTicket = () => {
     openTicketPurchaseModal();
 }   

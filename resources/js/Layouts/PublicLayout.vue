@@ -1,22 +1,23 @@
 <script setup>
-import Navbar from '@/Components/Common/Navbar.vue';
+import Navbar from "@/Components/Common/Navbar.vue";
+import Footer from "@/Components/layout/footer.vue";
 
 const props = defineProps({
-  includeHeader: {
-    type: Boolean,
-    default: true,
-  },
+    includeHeader: {
+        type: Boolean,
+        default: true,
+    },
 });
 </script>
 
 <template>
-  <section class="layout font-body min-h-screen">
-    <Navbar v-if="includeHeader" />
-    
-    <main class="flex flex-col items-center justify-center text-white">
-      <slot />
-    </main>
-  </section>
+    <section class="layout min-h-screen">
+        <Navbar v-if="includeHeader" />
+
+        <main class="font-body">
+            <slot />
+        </main>
+
+        <Footer />
+    </section>
 </template>
-
-
